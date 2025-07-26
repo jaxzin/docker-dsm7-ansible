@@ -1,0 +1,19 @@
+- name: Run DSM fingerprint on all hosts
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Copy fingerprint script to instance
+      copy:
+        src: dsm-full-fingerprint.sh    # This script must live alongside converge.yml
+        dest: /tmp/dsm-full-fingerprint.sh
+        mode: '0755'
+
+    - name: Execute fingerprint script
+      shell: /tmp/dsm-full-fingerprint.sh > /tmp/fingerprint.log
+
+    - name: Fetch fingerprint log back to host
+      fetch:
+        src: /tmp/fingerprint.log      # Path on instance
+        dest: "./output/{{ inventory_hostname }}.log"  # Relative to scenario root
+        flat: yes

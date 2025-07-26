@@ -1,0 +1,13 @@
+[project]
+name = "molecule-fingerprint-rig"
+version = "0.1.0"
+description = "Collect DSM vs Debian fingerprints via Molecule"
+requires-python = ">=3.13.5"
+
+dependencies = [
+    "molecule==6.0.3",          # your Molecule version
+    "molecule-docker==2.1.0",   # the Docker driver plugin
+    "ansible-compat==24.10.0",  # Ansible compatibility layer
+    "ansible-core==2.15.13",    # minimum Ansible Core
+    "docker==7.1.0"             # ensure docker-py SDK >= 7.1.0
+]

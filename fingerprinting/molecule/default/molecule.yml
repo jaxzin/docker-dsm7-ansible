@@ -1,0 +1,42 @@
+---
+# Molecule configuration to run the DSM fingerprint script against Debian images
+
+driver:
+  # Use Docker to spin up clean containers for testing
+  name: docker
+
+platforms:
+  # Debian 10: run fingerprint against Buster-based image
+  - name: debian10-fingerprint
+    image: geerlingguy/docker-debian10-ansible
+    privileged: false
+    pre_build_image: true
+
+  # Debian 11: run fingerprint against Bullseye-based image
+  - name: debian11-fingerprint
+    image: geerlingguy/docker-debian11-ansible
+    privileged: false
+    pre_build_image: true
+
+provisioner:
+  # Apply the converge playbook using Ansible
+  name: ansible
+  config_options:
+    defaults:
+      # Skip SSH key checks on ephemeral instances
+      host_key_checking: false
+      # No retry files needed
+      retry_files_enabled: false
+      # SSH timeout for slow startups
+      timeout: 60
+
+# Molecule automatically uses 'converge.yml' in this directory
+
+verifier:
+  # Use Ansible to run any assertion tests (none defined here)
+  name: ansible
+
+# Lint YAML and Ansible syntax before running
+lint: |
+  yamllint .
+  ansible-lint
