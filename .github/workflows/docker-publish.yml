@@ -1,5 +1,10 @@
 name: Build & Publish Docker Image
 
+# Grant the minimal extra permissions for package publishing
+permissions:
+  contents: read       # we only need to checkout
+  packages: write      # allow publishing to ghcr.io
+
 on:
   push:
     branches:
