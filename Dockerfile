@@ -44,8 +44,7 @@ RUN locale-gen en_US.utf8 && \
 # Stub Synology VERSION file with full DSM metadata, remove Ubuntu's os-release
 RUN mkdir -p /etc.defaults && \
     printf 'majorversion="7"\nminorversion="2"\nmajor="7"\nminor="2"\nmicro="2"\nbuildphase="GM"\nbuildnumber="72806"\nsmallfixnumber="3"\nnano="3"\nbase="72806"\nproductversion="7.2.2"\nos_name="DSM"\nbuilddate="2025/01/20"\nbuildtime="14:11:21"\n' > /etc.defaults/VERSION && \
-    ln -sf /etc.defaults/VERSION /etc/VERSION && \
-    rm -f /etc/os-release
+    ln -sf /etc.defaults/VERSION /etc/VERSION
 
 ###############################################################################
 # Stub Synology service & package tooling
