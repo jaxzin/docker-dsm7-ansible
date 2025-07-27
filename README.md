@@ -1,7 +1,6 @@
 # Synology DSM 7 Container Image for Ansible Molecule Testing
 
 [![Build & Publish Docker Image](https://github.com/jaxzin/docker-dsm7-ansible/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/jaxzin/docker-dsm7-ansible/actions/workflows/docker-publish.yml)
-[![Docker Pulls](https://img.shields.io/docker/pulls/ghcr.io/jaxzin/docker-dsm7-ansible.svg)](https://github.com/jaxzin/docker-dsm7-ansible/pkgs/container/docker-dsm7-ansible)
 
 A Docker image for running Ansible Molecule tests, tailored for roles targeting Synology DSM 7.2.
 
