@@ -32,7 +32,7 @@ platforms:
 
   # DSM 7.2 fingerprint (to compare against real DSM)
   - name: dsm72-fingerprint
-    image: jaxzin/docker-dsm7-ansible:7.2.2
+    image: ghcr.io/jaxzin/docker-dsm7-ansible:v7.2.2
     privileged: true
     pre_build_image: true
 
