@@ -1,0 +1,58 @@
+
+=== OS Identification ===
+NAME="Debian GNU/Linux"
+VERSION_ID="12"
+ID=debian
+etc_issue=Debian GNU/Linux 12 
+ \l
+
+=== Kernel & Compiler ===
+Linux debian12-fingerprint 6.10.14-linuxkit #1 SMP Sat May 17 08:28:57 UTC 2025 aarch64 GNU/Linux
+Linux version 6.10.14-linuxkit (root@buildkitsandbox) (gcc (Alpine 13.2.1_git20240309) 13.2.1 20240309, GNU ld (GNU Binutils) 2.42) #1 SMP Sat May 17 08:28:57 UTC 2025
+
+=== glibc Version ===
+glibc (getconf): 2.36
+
+=== Init (PID 1) & systemd ===
+  PID  PPID COMMAND         COMMAND
+    1     0 bash            bash -c while true; do sleep 10000; done
+systemd 252 (252.38-1~deb12u1)
+
+=== Cgroup Hierarchy ===
+cgroup: v1
+/dev/vda1 on /sys/fs/cgroup type ext4 (rw,relatime,discard)
+
+=== Python Versions ===
+python: not installed
+python2: not installed
+python3: Python 3.11.2
+
+=== Package Managers ===
+apt: present
+dpkg: present
+
+=== Filesystem & Tools ===
+rootfs=overlay
+mke2fs 1.47.0 (5-Feb-2023)
+
+=== Shell & BusyBox ===
+/usr/bin/dash
+
+=== Synology Service Tooling ===
+
+=== Logging Stack ===
+rsyslogd: not installed
+systemd 252 (252.38-1~deb12u1)
+
+=== Security Frameworks ===
+AppArmor: not detected
+
+=== Firewall Tools ===
+
+=== Locale & Timezone ===
+LANG=
+timezone: UTC
+
+=== Loaded Kernel Modules (partial) ===
+
+Fingerprint complete.

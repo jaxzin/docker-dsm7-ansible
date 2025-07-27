@@ -18,6 +18,24 @@ platforms:
     privileged: false
     pre_build_image: true
 
+  # Debian 12 fingerprint
+  - name: debian12-fingerprint
+    image: geerlingguy/docker-debian12-ansible
+    privileged: false
+    pre_build_image: true
+
+  # Ubuntu 20.04 fingerprint
+  - name: ubuntu2004-fingerprint
+    image: geerlingguy/docker-ubuntu2004-ansible
+    privileged: false
+    pre_build_image: true
+
+  # DSM 7.2 fingerprint (to compare against real DSM)
+  - name: dsm72-fingerprint
+    image: jaxzin/docker-dsm7-ansible:7.2.2
+    privileged: true
+    pre_build_image: true
+
 provisioner:
   # Apply the converge playbook using Ansible
   name: ansible

@@ -1,0 +1,86 @@
+
+=== OS Identification ===
+majorversion="7"
+minorversion="2"
+productversion="7.2.2"
+
+=== Kernel & Compiler ===
+Linux nas 4.4.302+ #72806 SMP Thu Sep 5 13:42:01 CST 2024 x86_64 GNU/Linux synology_apollolake_918+
+Linux version 4.4.302+ (root@build7) (gcc version 12.2.0 (GCC) ) #72806 SMP Thu Sep 5 13:42:01 CST 2024
+
+=== glibc Version ===
+glibc (link): libc.so.6
+
+=== Init (PID 1) & systemd ===
+  PID  PPID COMMAND         COMMAND
+    1     0 systemd         /sbin/init
+systemd 219
+
+=== Cgroup Hierarchy ===
+cgroup: v1
+tmpfs on /sys/fs/cgroup type tmpfs (ro,nosuid,nodev,noexec,mode=755)
+cgroup on /sys/fs/cgroup/systemd type cgroup (rw,nosuid,nodev,noexec,relatime,xattr,release_agent=/usr/lib/systemd/systemd-cgroups-agent,name=systemd)
+cgroup on /sys/fs/cgroup/synomonitor type cgroup (rw,nosuid,nodev,noexec,relatime,name=synomonitor)
+cgroup on /sys/fs/cgroup/blkio type cgroup (rw,nosuid,nodev,noexec,relatime,blkio)
+cgroup on /sys/fs/cgroup/memory type cgroup (rw,nosuid,nodev,noexec,relatime,memory)
+cgroup on /sys/fs/cgroup/cpu type cgroup (rw,nosuid,nodev,noexec,relatime,cpu)
+cgroup on /sys/fs/cgroup/devices type cgroup (rw,nosuid,nodev,noexec,relatime,devices)
+cgroup on /sys/fs/cgroup/cpuacct type cgroup (rw,nosuid,nodev,noexec,relatime,cpuacct)
+cgroup on /sys/fs/cgroup/cpuset type cgroup (rw,nosuid,nodev,noexec,relatime,cpuset)
+cgroup on /sys/fs/cgroup/freezer type cgroup (rw,nosuid,nodev,noexec,relatime,freezer)
+
+=== Python Versions ===
+python: Python 3.8.15
+python2: Python 2.7.18
+python3: Python 3.8.15
+
+=== Package Managers ===
+synopkg: present
+synosystemctl: present
+dpkg: present
+
+=== Filesystem & Tools ===
+rootfs=ext4
+btrfs-progs v4.0
+mke2fs 1.44.1 (24-Mar-2018)
+/dev/mapper/control: open failed: Permission denied
+Failure to communicate with kernel device-mapper driver.
+Incompatible libdevmapper (unknown version) and kernel driver (unknown version).
+  LVM version:     2.02.132(2)-git (2015-09-22)
+  Library version: 1.02.109-git (2015-09-22)
+mdadm - v3.4 - 10th March 2023
+
+=== Shell & BusyBox ===
+/usr/bin/bash
+
+=== Synology Service Tooling ===
+synosystemctl: present
+synopkg: present
+
+=== Logging Stack ===
+rsyslogd: not installed
+systemd 219
+
+=== Security Frameworks ===
+AppArmor: enabled
+
+=== Firewall Tools ===
+iptables: iptables v1.8.3 (legacy)
+
+=== Locale & Timezone ===
+LANG=en_US.utf8
+timezone: EDT
+
+=== Loaded Kernel Modules (partial) ===
+Module                  Size  Used by
+vhost_scsi             29571  1
+vhost                  31014  1 vhost_scsi
+tcm_loop               15357  1
+iscsi_target_mod      275992  1
+target_core_user       27912  0
+target_core_ep         51236  2
+target_core_multi_file    29343  1
+target_core_file       60189  1
+target_core_iblock     17438  1
+
+Fingerprint complete.
